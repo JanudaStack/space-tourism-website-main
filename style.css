@@ -15,6 +15,18 @@ a {
     color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    color: var(--clr-light);
+}
+
 button {
     font: inherit;
     border: none;
@@ -31,20 +43,26 @@ img {
 
 :root {
     /* Colors */
+    --clr-light-dim: #ffffffb4;
     --clr-dark: #0b0d17; /* Dark background color */
     --clr-light: #ffffff; /* Light text color */
     --clr-accent: #d0d6f9; /* Accent color for text */
     --clr-highlight: #ffffff; /* Highlight color (e.g., for buttons) */
 
     /* Font Sizes */
-    --fs-900: 9.375rem; /* Large heading (e.g., "SPACE") */
-    --fs-800: 3.5rem; /* Medium heading */
+    --fs-900: 6rem; /* Large heading (e.g., "SPACE") */
+    --fs-800: 3.2rem; /* Medium heading */
     --fs-700: 2rem; /* Small heading */
     --fs-body: 1rem; /* Body text */
 
     /* Font Weights */
     --fw-regular: 400;
     --fw-bold: 700;
+
+    /* Font Families */
+    --ff-sans-normal-para: 'Barlow', sans-serif; /* For body text or general use */
+    --ff-serif-headings: 'Bellefair', serif; /* For headings or large text */
+    --ff-sans-condensed-nav: 'Barlow Condensed', sans-serif; /* For navigation or small text */
 
     /* Spacing */
     --spacing-1: 0.5rem;
@@ -57,4 +75,100 @@ img {
     --letter-spacing: 0.1em;
     --container-width: 90%;
     --max-width: 1200px;
+}
+
+body {
+    height: 100dvh;
+    background-image: url('./assets/home/background-home-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Navigation */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.2rem;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.hamburger-menu img {
+    width: 34px;
+    height: 34px;
+}
+
+/* Hero section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 2rem;
+    padding: 1.2rem;
+    gap: 3rem;
+}
+
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hero-header {
+    color: var(--clr-light-dim);
+    font-family: var(--ff-sans-condensed-nav);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 5vw, var(--fs-800));
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.space-text {
+    font-size: clamp(2rem, 28vw, 10rem);
+    font-family: var(--ff-serif-headings);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-paragraph {
+    width: 90%;
+    color: var(--clr-light-dim);
+    font-family: var(--ff-sans-normal-para);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    text-align: center;
+}
+
+/* EXPLORE button */
+.explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-btn {
+    background-color: var(--clr-light);
+    font-family: var(--ff-serif-headings);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    border-radius: 50%;
+    padding: 2rem 0;
+    width: 8rem; /* Adjust size as needed */
+    height: 8rem; /* Ensure width and height are equal for a perfect circle */
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-btn:hover {
+    cursor: pointer;
+    background-color: var(--clr-light-dim);
+    transform: scale(1.1); /* Slightly increase size */
+    box-shadow: 0 0 20px var(--clr-light); /* Add a glowing effect */
 }
