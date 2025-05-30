@@ -1,0 +1,60 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Reset images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+:root {
+    /* Colors */
+    --clr-dark: #0b0d17; /* Dark background color */
+    --clr-light: #ffffff; /* Light text color */
+    --clr-accent: #d0d6f9; /* Accent color for text */
+    --clr-highlight: #ffffff; /* Highlight color (e.g., for buttons) */
+
+    /* Font Sizes */
+    --fs-900: 9.375rem; /* Large heading (e.g., "SPACE") */
+    --fs-800: 3.5rem; /* Medium heading */
+    --fs-700: 2rem; /* Small heading */
+    --fs-body: 1rem; /* Body text */
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* Spacing */
+    --spacing-1: 0.5rem;
+    --spacing-2: 1rem;
+    --spacing-3: 2rem;
+    --spacing-4: 4rem;
+
+    /* Other */
+    --line-height: 1.5;
+    --letter-spacing: 0.1em;
+    --container-width: 90%;
+    --max-width: 1200px;
+}
