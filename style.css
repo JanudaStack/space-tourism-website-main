@@ -105,6 +105,11 @@ body {
     height: 34px;
 }
 
+main {
+    height: 100%;
+    align-content: center;
+}
+
 /* Hero section */
 .hero-section {
     display: flex;
