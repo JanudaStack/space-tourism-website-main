@@ -82,6 +82,7 @@ body {
     background-image: url('./assets/home/background-home-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Navigation */
@@ -92,11 +93,15 @@ body {
     padding: 1.5rem 1.2rem;
 }
 
-.desktop-nav {
+.mobile-nav {
     display: none;
 }
 
-.mobile-nav {
+.tablet-nav {
+    display: none;
+}
+
+.desktop-nav {
     display: none;
 }
 
@@ -112,9 +117,8 @@ main {
 
 /* Hero section */
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr;
     margin-top: 2rem;
     padding: 1.2rem;
     gap: 5rem;
@@ -176,4 +180,52 @@ main {
     background-color: var(--clr-light-dim);
     transform: scale(1.1); /* Slightly increase size */
     box-shadow: 0 0 20px var(--clr-light); /* Add a glowing effect */
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url('./assets/home/background-home-tablet.jpg');
+        background-position: center;
+    }
+    /* Navigation */
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-bar {
+        padding: 0rem;
+        align-items: normal;
+    }
+
+    .site-logo {
+        padding: 2rem;
+    }
+
+    .tablet-nav {
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        background-color: rgba(
+            255,
+            255,
+            255,
+            0.044
+        ); /* Semi-transparent white */
+        backdrop-filter: blur(10px); /* Apply glass effect blur */
+        -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    }
+
+    .tablet-nav-links {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        font-family: var(--ff-sans-condensed-nav);
+        font-size: 1.4rem;
+    }
+
+    /* Hero section */
+    .hero-paragraph {
+        width: 60%;
+    }
 }
