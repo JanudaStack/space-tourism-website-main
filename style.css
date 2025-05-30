@@ -78,7 +78,7 @@ img {
 }
 
 body {
-    height: 100dvh;
+    /* height: 100dvh; */
     background-image: url('./assets/home/background-home-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,6 +103,11 @@ body {
 .hamburger-menu img {
     width: 34px;
     height: 34px;
+}
+
+main {
+    height: 100%;
+    align-content: center;
 }
 
 /* Hero section */
