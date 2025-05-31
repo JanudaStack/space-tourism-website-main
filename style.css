@@ -167,9 +167,8 @@ main {
     font-family: var(--ff-serif-headings);
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     border-radius: 50%;
-    padding: 2rem 0;
-    width: 8rem; /* Adjust size as needed */
-    height: 8rem; /* Ensure width and height are equal for a perfect circle */
+    width: 10rem; /* Adjust size as needed */
+    height: 10rem; /* Ensure width and height are equal for a perfect circle */
     text-align: center;
     text-transform: uppercase;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
